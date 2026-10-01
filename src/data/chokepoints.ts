@@ -1,0 +1,136 @@
+import { Chokepoint } from '../types';
+
+export const CHOKEPOINTS: Chokepoint[] = [
+  {
+    id: 'hormuz',
+    name: 'Strait of Hormuz',
+    shortCode: 'HRM',
+    region: 'Middle East (Persian Gulf - Gulf of Oman)',
+    primaryWaterway: 'Oman / Iran Maritime Border',
+    coordinates: { lat: 26.5667, lng: 56.2500, svgX: 625, svgY: 345 },
+    dailyOilFlowMbd: 20.5,
+    dailyLngFlowMmtpa: 82.0, // Qatari LNG dominant
+    dailyVesselsTransit: 88,
+    globalMaritimeSharePct: 21.0,
+    threatLevel: 'HIGH',
+    jwcWarRiskStatus: true,
+    hullWarRiskPremiumPct: 0.45,
+    capeRerouteDelayDays: 16.5,
+    additionalFuelCostPerVoyage: 950000,
+    primaryThreatActors: ['IRGC Navy Fast Attack Craft', 'Iranian Coastal Defense Silkworm/Noor Batteries', 'Mining Vectors'],
+    activeSecurityOps: ['US 5th Fleet (Task Force 152)', 'EMASOH (Operation Agenor)', 'UK Royal Navy (Operation Kipion)'],
+    recentIncidentsCount30d: 4,
+    statusSummary: 'Heightened IRGC naval harassment and drone surveillance following regional escalations. 2-mile inbound and outbound traffic separation scheme operating under elevated naval escort readiness.',
+    navigationalNotice: 'UKMTO Advisory 042/OCT/26: Vessels transiting Strait of Hormuz advised to maintain maximum practical speed, enforce strict radar watch for uncrewed surface vessels (USVs), and register transit with IMSC.'
+  },
+  {
+    id: 'bab-el-mandeb',
+    name: 'Bab el-Mandeb & Southern Red Sea',
+    shortCode: 'BEM',
+    region: 'Horn of Africa / Southern Red Sea',
+    primaryWaterway: 'Yemen / Djibouti / Eritrea Chokepoint',
+    coordinates: { lat: 12.5833, lng: 43.3333, svgX: 585, svgY: 395 },
+    dailyOilFlowMbd: 8.8,
+    dailyLngFlowMmtpa: 34.5,
+    dailyVesselsTransit: 42, // Down from 85 pre-crisis
+    globalMaritimeSharePct: 12.0,
+    threatLevel: 'CRITICAL',
+    jwcWarRiskStatus: true,
+    hullWarRiskPremiumPct: 0.95, // Peak war risk zone
+    capeRerouteDelayDays: 14.2,
+    additionalFuelCostPerVoyage: 1250000,
+    primaryThreatActors: ['Yemeni Houthi Anti-Ship Ballistic Missiles', 'Shahed-type OWA UAVs', 'Remote-Controlled Explosive USVs'],
+    activeSecurityOps: ['Operation Prosperity Guardian (CTF 153)', 'EUNAVFOR Operation ASPIDES', 'Operation Poseidon Archer'],
+    recentIncidentsCount30d: 14,
+    statusSummary: 'Active kinetic interdiction zone. >62% of major container and commercial bulk tonnage currently diverted via Cape of Good Hope, adding 4,300 nautical miles per voyage.',
+    navigationalNotice: 'CENTCOM / UKMTO Warning: Active anti-ship ballistic missile and low-profile explosive boat threat between Hodeidah and Bab el-Mandeb. Commercial transit without naval air defense umbrella strongly discouraged.'
+  },
+  {
+    id: 'malacca',
+    name: 'Strait of Malacca',
+    shortCode: 'MLC',
+    region: 'Southeast Asia (Indian Ocean - South China Sea)',
+    primaryWaterway: 'Malaysia / Indonesia / Singapore Narrow',
+    coordinates: { lat: 1.4300, lng: 102.8900, svgX: 790, svgY: 440 },
+    dailyOilFlowMbd: 16.2,
+    dailyLngFlowMmtpa: 48.0,
+    dailyVesselsTransit: 230,
+    globalMaritimeSharePct: 25.0,
+    threatLevel: 'ELEVATED',
+    jwcWarRiskStatus: false,
+    hullWarRiskPremiumPct: 0.08,
+    capeRerouteDelayDays: 8.0, // Via Sunda or Lombok Straits
+    additionalFuelCostPerVoyage: 480000,
+    primaryThreatActors: ['Armed Sea Robbery / Boarding Syndicates', 'Severe Traffic Density / Collision Risk', 'GPS Jamming Clusters'],
+    activeSecurityOps: ['Malacca Straits Patrol (MSP)', 'Singapore Information Fusion Centre (IFC)', 'Indonesian Bakamla'],
+    recentIncidentsCount30d: 3,
+    statusSummary: 'Primary conduit for Middle East crude to China, Japan, and South Korea. Phillips Channel narrows to 1.5 nautical miles, forming the world’s densest maritime congestion corridor.',
+    navigationalNotice: 'ReCAAP ISC Incident Advisory: Heightened watch for opportunistic nocturnal boardings by skiffs in the eastbound lane of the Traffic Separation Scheme near Phillip Channel.'
+  },
+  {
+    id: 'suez',
+    name: 'Suez Canal',
+    shortCode: 'SEZ',
+    region: 'North Africa (Red Sea - Mediterranean)',
+    primaryWaterway: 'Suez Canal Authority (Egypt)',
+    coordinates: { lat: 30.7050, lng: 32.3442, svgX: 555, svgY: 310 },
+    dailyOilFlowMbd: 5.5,
+    dailyLngFlowMmtpa: 22.0,
+    dailyVesselsTransit: 38, // Down from 72/day
+    globalMaritimeSharePct: 10.0,
+    threatLevel: 'HIGH',
+    jwcWarRiskStatus: true,
+    hullWarRiskPremiumPct: 0.50,
+    capeRerouteDelayDays: 13.5,
+    additionalFuelCostPerVoyage: 1100000,
+    primaryThreatActors: ['Upstream Red Sea Missile Interdictions', 'Egyptian Transit Toll Revenue Loss', 'Grounding Bottlenecks'],
+    activeSecurityOps: ['Egyptian Armed Forces Canal Security Command', 'Combined Maritime Forces (CMF)'],
+    recentIncidentsCount30d: 2,
+    statusSummary: 'Severe operational depression stemming directly from upstream Bab el-Mandeb missile danger. Suez Canal Authority reports 61% year-over-year decline in container vessel tonnage.',
+    navigationalNotice: 'SCA Navigation Circular: Convoy transit schedules adjusted. Northbound convoys assemble at Great Bitter Lake with mandatory pilotage and tug escorts for laden crude tankers.'
+  },
+  {
+    id: 'bosporus',
+    name: 'Turkish Straits (Bosporus & Dardanelles)',
+    shortCode: 'BOS',
+    region: 'Eurasia (Black Sea - Sea of Marmara - Aegean)',
+    primaryWaterway: 'Republic of Türkiye Territorial Waters',
+    coordinates: { lat: 41.1167, lng: 29.0667, svgX: 545, svgY: 275 },
+    dailyOilFlowMbd: 3.2,
+    dailyLngFlowMmtpa: 6.0,
+    dailyVesselsTransit: 110,
+    globalMaritimeSharePct: 4.5,
+    threatLevel: 'ELEVATED',
+    jwcWarRiskStatus: true, // Black Sea portions
+    hullWarRiskPremiumPct: 0.25,
+    capeRerouteDelayDays: 0, // No maritime bypass exists
+    additionalFuelCostPerVoyage: 0,
+    primaryThreatActors: ['Drifting Sea Mines (Ukraine War)', 'Russian Shadow Fleet Tanker Failures', 'Montreux Convention Enforcement'],
+    activeSecurityOps: ['Turkish Coast Guard (Sahil Güvenlik)', 'MCM Black Sea Task Group (Türkiye-Romania-Bulgaria)'],
+    recentIncidentsCount30d: 2,
+    statusSummary: 'Governed by the 1936 Montreux Convention. Vital outlet for Caspian CPC crude, Russian Urals blend, and Ukrainian agricultural exports. Squeeze on aging dark fleet insurance papers.',
+    navigationalNotice: 'Ministry of Transport Notice: Mandatory daylight navigation and tug assistance for all tankers exceeding 200m LOA carrying dangerous cargo. Mine hunting operations ongoing off Bosporus entrance.'
+  },
+  {
+    id: 'panama',
+    name: 'Panama Canal',
+    shortCode: 'PAN',
+    region: 'Central America (Atlantic - Pacific)',
+    primaryWaterway: 'Panama Canal Authority (ACP)',
+    coordinates: { lat: 9.0800, lng: -79.6800, svgX: 280, svgY: 395 },
+    dailyOilFlowMbd: 1.8, // Heavy in refined products & US Gulf LPG
+    dailyLngFlowMmtpa: 14.0,
+    dailyVesselsTransit: 34,
+    globalMaritimeSharePct: 5.0,
+    threatLevel: 'LOW',
+    jwcWarRiskStatus: false,
+    hullWarRiskPremiumPct: 0.02,
+    capeRerouteDelayDays: 21.0, // Via Strait of Magellan / Cape Horn
+    additionalFuelCostPerVoyage: 1650000,
+    primaryThreatActors: ['El Niño Climate Drought in Gatun Lake', 'Neo-Panamax Draft Restrictions (44ft vs 50ft)', 'Auction Slot Premium Spikes'],
+    activeSecurityOps: ['Panama Canal Security Division', 'US Coast Guard Joint Interdiction Task Force South'],
+    recentIncidentsCount30d: 0,
+    statusSummary: 'Operational recovery following intense drought cycle. Transits restored to 34 slots/day with Neo-Panamax draft cleared to 48ft. Critical route for US Gulf Coast LNG to Asian utility terminals.',
+    navigationalNotice: 'ACP Advisory to Shipping A-18-2026: Booking slots for Neo-Panamax locks normalized at 8 daily slots. Non-booked transit waiting times averaging 36 hours at Pacific anchorage.'
+  }
+];
